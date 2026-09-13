@@ -181,4 +181,4 @@ To calculate the percentage of workers who **did not qualify** for a given bonus
 ## 👤 Author
 - **LinkedIn:** [Your LinkedIn Profile URL](https://www.linkedin.com/in/ritik-panwar-01a67a24b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzPr0zrYGSguyR5pNTkBafQ%3D%3D)
 - **GitHub:** [Your GitHub Profile URL](https://github.com/ritikpanwar10/)
-- **Portfolio:** [Your Portfolio / Project Link](https://vercel.app)
+- **Portfolio:** [Your Portfolio / Project Link](https://ritikpanwar10.github.io/ritikpanwar.github.io/)
