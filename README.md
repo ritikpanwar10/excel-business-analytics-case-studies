@@ -106,31 +106,57 @@ Evaluate cinema ticket sales across regional cities, compute revenue metrics bas
 3. **Percentage Contribution:**
    - Computed each city's revenue share against overall takings using absolute cell referencing (`$F$Total`).
 
-### 📐 Applied Formulas
+### Key Parameters:
+* **Average Ticket Cost:** ₹250.00
+* **Total Cities Analyzed:** 12
 
-| Metric | Formula | Description |
-| :--- | :--- | :--- |
-| **City Revenue** | `=C2 * $C$18` | Multiplies city ticket volume by fixed unit ticket price |
-| **Total Tickets** | `=SUM(C2:C15)` | Nationwide ticket sales sum |
-| **Total Revenue** | `=SUM(D2:D15)` | Total commercial gross across all cinema hubs |
-| **Max Tickets** | `=MAX(C2:C15)` | Identifies top-volume cinema market |
-| **Min Revenue** | `=MIN(D2:D15)` | Identifies lowest-grossing market |
-| **Average Revenue** | `=AVERAGE(D2:D15)` | Mean performance benchmark across cities |
-| **% Revenue Share**| `=D2 / $D$16` | City revenue divided by absolute total revenue |
+  ## 🎯 Objectives & Visual Breakdown
 
-### 📸 Visual Documentation
+### Objective 1: Total Earnings Per City & Overall Totals
+* **Total Tickets Sold Across All Cities:** `13,796,690`
+* **Total Revenue Generated:** `₹ 3,449,172,500`
+* **City-Level Revenue Calculation:** Multiplied each city's ticket volume by the base ticket price (`₹ 250`).
 
-#### 1. City Sales & Revenue Performance Table
-![City Sales Table](screenshots/task2/01_city_sales_table.png)
-*Figure 2.1: City-by-city sales volumes, price models, and percentage revenue contributions.*
+<img width="941" height="527" alt="1" src="https://github.com/user-attachments/assets/aa45fad9-463b-46fc-85b8-243f02ed8e87" />
 
-#### 2. Descriptive Statistical Summary
-![Statistical Summary](screenshots/task2/02_summary_statistics.png)
-*Figure 2.2: Overall market statistics displaying ticket and revenue boundaries.*
 
-#### 3. Regional Takings Distribution
-![Revenue Share Chart](screenshots/task2/03_revenue_share_chart.png)
-*Figure 2.3: Visual breakdown of market share contributions across operational cities.*
+---
+
+### Objective 2: Statistical Insights (Min, Max, Average)
+Calculated the core distribution benchmarks across both ticket sales volume and gross revenue:
+
+| Metric | Tickets Sold | Revenue Generated (₹) | Top / Bottom City |
+| :--- | :---: | :---: | :--- |
+| **Maximum** | `3,249,788` | `₹ 812,447,000` | Mumbai |
+| **Minimum** | `299,596` | `₹ 74,899,000` | Noida |
+| **Average** | `1,149,724` | `₹ 287,431,042` | — |
+
+<img width="1022" height="571" alt="2" src="https://github.com/user-attachments/assets/69ee4daf-6ae7-40d8-8c43-ce5bab3054f0" />
+
+---
+
+### Objective 3: Percentage Revenue Share (% Takings Per City)
+Determines the relative financial contribution of each individual city toward total collections:
+
+$$\text{\% Revenue} = \left( \frac{\text{City Revenue}}{\text{Total Revenue}} \right) \times 100$$
+
+* **Top Contributor:** Mumbai at **23.6%** (₹81.24 Cr)
+* **Top 3 Contributors:** Mumbai (23.6%), Delhi (13.8%), and Chennai (13.2%) together account for over **50.6%** of total revenue.
+* **Lowest Contributor:** Noida at **2.2%** (₹7.49 Cr)
+
+<img width="1055" height="563" alt="3" src="https://github.com/user-attachments/assets/2116d54d-2e98-43b3-bde8-18331838012d" />
+
+---
+
+## 🧮 Excel Formulas Reference
+
+* **City Revenue (Column E):** `=D3 * $H$13` *(or `=D3 * 250`)*
+* **Total Tickets Sold (Cell D16):** `=SUM(D3:D14)`
+* **Total Revenue (Cell E16):** `=SUM(E3:E14)`
+* **Max Tickets / Revenue:** `=MAX(D3:D14)` / `=MAX(E3:E14)`
+* **Min Tickets / Revenue:** `=MIN(D3:D14)` / `=MIN(E3:E14)`
+* **Average Tickets / Revenue:** `=AVERAGE(D3:D14)` / `=AVERAGE(E3:E14)`
+* **% Revenue (Column F):** `=E3 / $E$16` *(Formatted as Percentage `0.0%`)*
 
 ---
 
