@@ -1,0 +1,32 @@
+Task: Customer Care Services Data Management
+
+
+You are tasked with managing and analyzing customer care data for a company with a global customer base. The company operates customer care services offices in India, USA, and China, each responsible for handling assistance requests from customers based on their origin country. Additionally, the company aims to prioritize assistance requests for damaged products based on the purchase value.
+
+
+
+Objectives:
+
+1) Import Data: Import the data from the provided "Customers.txt" file.
+
+
+
+2) Assign Helpdesk:
+
+In the dataset, add a new column titled "Helpdesk". Utilize a function to assign each customer assistance request to the appropriate helpdesk based on the customer's country of origin:
+
+China Helpdesk: For customers from South Korea or Japan.
+
+India Helpdesk: For customers from Sri Lanka, New Zealand, or Wales.
+
+USA Helpdesk: For customers from all other countries.
+
+
+
+3) Determine Priority:
+
+Add another column titled "Priority". Implement a function to identify and mark assistance requests that require immediate attention:
+
+Mark as "High" priority for assistance requests with the reason "Damaged Product" and a purchase value greater than the average of all purchase values in the dataset.
+
+Leave the cell empty for all other cases.
