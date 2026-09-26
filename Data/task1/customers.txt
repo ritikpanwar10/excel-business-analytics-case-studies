@@ -1,0 +1,140 @@
+Customer,Gender,Country,Reason,Purchase value
+Kimberly Munoz,F,USA,Delayed shipment,21546
+Dwayne Smith,M,Slovenia,Damaged item,34659
+Mark Hall,M,South Korea,Damaged item,25661
+Gene Molina,M,Spain,Damaged item,2589
+Mckenzie Lamb,F,Norway,Exchange request,22742
+Philip Elliott,M,UK,Delayed shipment,5985
+Julie Walker,F,Japan,My Account,2945
+Andrew Mendoza,M,Romania,Payment method,3448
+Alexander Pitts,M,Sri Lanka,Different product,34559
+Linda Burns,F,Sri Lanka,Damaged item,9437
+James Smith,M,UK,Delayed shipment,32224
+Jennifer Edwards,F,USA,Payment method,11668
+Calvin Rodriguez,M,Sri Lanka,Delayed shipment,16613
+William Cooper,M,UK,Different product,24423
+Lorraine Daniel,F,South Korea,Delayed shipment,22413
+James Kelly,M,New Zealand,My Account,31443
+Teresa Baldwin,F,USA,Delayed shipment,21205
+Charles Moore,M,South Korea,Exchange request,25367
+Jennifer Salinas,F,Belgium,My Account,6373
+Jessica Clark,F,Croatia,Exchange request,13493
+Jenna Powell,F,Norway,Delayed shipment,9033
+David Craig,M,USA,Different product,33047
+Mary Davis,F,Argentine,Delayed shipment,20303
+Stephanie Montoya,F,Sri Lanka,Delayed shipment,29912
+Taylor Long,F,South Korea,My Account,9684
+April Carpenter,F,USA,Damaged item,29844
+David Lewis,M,Sri Lanka,Exchange request,12067
+Lisa Jacobs,F,Sri Lanka,Delayed shipment,23803
+Dalton Cole,M,Japan,Damaged item,33498
+Julia Glover,F,Romania,Delayed shipment,4486
+Rebecca Fuller,F,South Korea,Delayed shipment,34366
+Brenda Robinson,F,Japan,Payment method,2149
+Kevin Ashley,M,South Korea,Damaged item,32643
+Jennifer Nguyen,F,Belgium,Payment method,29365
+Tami Burnett,F,South Korea,Damaged item,15944
+Natalie Lloyd,F,USA,My Account,5428
+Brandon Smith,M,Romania,My Account,31168
+Karen Hale,F,USA,My Account,4741
+Andrew Lewis,M,Sri Lanka,Payment method,10104
+Brooke Obrien,F,USA,Different product,3488
+Tiffany Ray,F,South Korea,Payment method,30154
+Melanie Fleming,F,UK,Exchange request,32774
+Jennifer Armstrong,F,Slovenia,Payment method,27375
+Paul Ramsey,M,UK,My Account,16066
+Michael Russell,M,Spain,Damaged item,11642
+Mr. Taylor Horn Jr.,M,Sri Lanka,Different product,9596
+Nathan Blake,M,USA,Different product,8806
+Kathleen Pope,F,USA,Delayed shipment,4349
+Ryan Burke,M,Switzerland,Exchange request,7591
+Mark Flores,M,USA,Payment method,17714
+David Rivera,M,Spain,Delayed shipment,2635
+Kevin Rojas,M,Spain,Exchange request,32853
+David Dillon,M,UK,Delayed shipment,19842
+Kelly Cisneros,F,South Korea,Different product,20365
+Alexis Cannon,F,New Zealand,Different product,1607
+Mr. Carlos Schneider,M,UK,Damaged item,8733
+Michelle Pratt,F,USA,Payment method,25782
+Rachel Clark,F,Japan,Payment method,18886
+Tanya Simpson,F,Romania,Damaged item,14239
+Sherry Collins,F,UK,Payment method,26043
+Felicia Edwards,F,USA,Exchange request,27761
+Linda Diaz,F,South Korea,Exchange request,13854
+Olivia Wells,F,UK,Delayed shipment,2441
+Carmen White,F,Japan,My Account,432
+Adam Simpson,M,USA,Delayed shipment,24677
+Michelle Wilson,F,Belgium,Damaged item,7997
+Julia Mccoy,F,Sri Lanka,Damaged item,13227
+Christopher Harris,M,Sri Lanka,Damaged item,10051
+Samantha Wilson,F,Sri Lanka,Exchange request,11966
+Kelli Collins,F,UK,Payment method,24382
+Erica Goodwin,F,USA,Delayed shipment,6102
+Andrea Cruz,F,USA,Payment method,15631
+Jacqueline Davila,F,Sri Lanka,Payment method,8254
+Ann Lee,F,Japan,Damaged item,24095
+Rebecca Rogers,F,UK,Damaged item,12583
+John Macias,M,Wales,Delayed shipment,16453
+Kathryn Baker,F,Sri Lanka,Delayed shipment,9627
+Carrie Buck,F,Austria,Exchange request,17916
+Candice Wright,F,South Korea,Damaged item,18677
+Matthew Gordon,M,UK,Different product,24578
+Samuel Bennett,M,UK,Delayed shipment,22342
+Timothy Lam,M,Sri Lanka,Different product,13992
+Denise Branch,F,Finland,Damaged item,16958
+Kelly Mitchell,F,South Korea,Payment method,18651
+John Nguyen,M,South Korea,Damaged item,22136
+Michele Ochoa,F,USA,Different product,16158
+Maria Pham,F,UK,Damaged item,3196
+Andrea Phillips,F,Poland,Exchange request,16589
+Tracie Sawyer,F,South Korea,Exchange request,30689
+Steven Mckinney,M,Japan,Damaged item,2184
+Jeffrey Wheeler,M,UK,Payment method,19026
+Joshua Benson,M,Wales,Payment method,14124
+Erik Lewis,M,Romania,Payment method,13722
+Suzanne Blankenship,F,UK,Different product,20936
+Allison Smith MD,F,Spain,Different product,18923
+Alicia Dillon,F,USA,Delayed shipment,28234
+Elizabeth Wilson,F,Sri Lanka,Damaged item,3976
+Marissa Hartman,F,South Korea,Payment method,4768
+Frank Smith,M,Sri Lanka,Delayed shipment,15905
+Megan Lamb,F,Portugal,My Account,12473
+Melissa Miller,F,South Korea,Delayed shipment,19306
+Nicole Anderson,F,Slovenia,My Account,33609
+Erin Fritz,F,Portugal,Payment method,10824
+Michelle Knight,F,South Korea,Payment method,1158
+Tiffany Lynch,F,Russia,My Account,26317
+Stephanie Buckley,F,Russia,My Account,32053
+Lauren Thomas,F,UK,Exchange request,23949
+Destiny Conrad,F,Sri Lanka,Damaged item,4461
+Jennifer Roberts,F,Spain,Exchange request,30372
+Adam Hebert,M,South Korea,Payment method,3443
+Samantha Taylor,F,UK,Damaged item,9297
+Douglas Salas,M,USA,Payment method,11752
+John Potter,M,UK,Exchange request,22349
+Daniel Campbell,M,Chile,Exchange request,14984
+Stephanie Lewis,F,Wales,Payment method,8351
+Dana Kim,F,USA,My Account,34441
+James George,M,Japan,Payment method,8893
+Stephanie Carter,F,USA,Damaged item,22655
+Allison Kim,F,South Korea,Delayed shipment,22816
+Donna Kelly,F,South Korea,Delayed shipment,31814
+Caitlyn Jackson,F,South Korea,Exchange request,21134
+Kevin Henson,M,UK,Delayed shipment,12834
+Adam Anderson,M,UK,Exchange request,30043
+Chelsea Wise,F,Spain,Damaged item,10237
+Eric Pham,M,UK,Delayed shipment,11824
+Susan Patrick,F,Belgium,Exchange request,32862
+Jonathan Roberts,M,UK,My Account,22036
+Robert Donovan,M,South Korea,My Account,25109
+Stephanie Matthews,F,Sri Lanka,Exchange request,31519
+Andrew Johnson,M,Wales,Damaged item,30925
+Selena Griffin,F,Sri Lanka,Exchange request,23192
+Joy Wagner,F,USA,Exchange request,6062
+Aaron Hicks,M,Spain,Damaged item,34679
+Scott Smith,M,Poland,My Account,911
+Stacey West,F,UK,Damaged item,15516
+Mary Hamilton,F,Spain,My Account,29614
+Nicole Bowman,F,Austria,Different product,28107
+Anthony Thompson,M,USA,Payment method,6995
+Veronica Hurley,F,Sri Lanka,Delayed shipment,13782
