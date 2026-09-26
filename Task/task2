@@ -1,0 +1,30 @@
+Task: Cinema Ticket Sales Analysis
+
+
+You are tasked with analyzing the performance of cinema ticket sales across various cities. The analysis involves calculating the total earnings, ticket sales, and deriving statistical insights such as minimum, maximum, and average sales, as well as the revenue generated. Additionally, you will calculate the percentage contribution of each city to the total revenue generated.
+
+
+
+Objectives:
+
+1)Total Earnings Per City:
+
+Calculate the total number of tickets sold across all cities.
+
+Determine the total money earned from ticket sales across all cities.
+
+Calculate the total number of tickets sold and total money earned for each city individually.
+
+Statistical Insights: This involves summing up the earnings from ticket sales per city.The Average Ticket Price is 250.
+
+
+
+2) Calculate the minimum, maximum, and average number of tickets sold across all cities.
+
+Determine the minimum, maximum, and average revenue generated from ticket sales across all cities.
+
+
+
+3)Percentage Takings Per City:
+
+Calculate the percentage contribution of each city's earnings to the total revenue generated from ticket sales. This will help in understanding the revenue share of each city in comparison to the overall performance.
