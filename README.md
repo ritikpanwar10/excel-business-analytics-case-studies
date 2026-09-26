@@ -36,43 +36,59 @@ A global enterprise routes customer support requests to regional helpdesk hubs (
 3. **High-Priority Escalation Flagging:**
    - Flagged as `"High"` if `Reason = "Damaged Product"` **AND** `Purchase Value > AVERAGE(all purchase values)`.
    - Remaining cells left blank (`""`).
+## Implementation Details
 
-### 📐 Applied Formulas
+The data transformation pipeline is executed using Power Query (M Formula Language):
 
-#### Helpdesk Column (`F2`):
-```excel
-=IF(OR(Country="South Korea", Country="Japan"), "China Helpdesk",
- IF(OR(Country="Sri Lanka", Country="New Zealand", Country="Wales"), "India Helpdesk",
- "USA Helpdesk"))
-```
+### Step 1: Import Data
+1. Open Excel and navigate to the **Data** tab.
+2. Click **Get Data** $\rightarrow$ **From File** $\rightarrow$ **From Text/CSV**.
+3. Select `customers.txt`, set delimiter detection to **Comma**, and click **Transform Data**.
 
-*Alternative (Excel 2019 / 365 `IFS` syntax):*
-```excel
-=IFS(
-    OR(B2="South Korea", B2="Japan"), "China Helpdesk",
-    OR(B2="Sri Lanka", B2="New Zealand", B2="Wales"), "India Helpdesk",
-    TRUE, "USA Helpdesk"
-)
-```
+<img width="1916" height="971" alt="1" src="https://github.com/user-attachments/assets/c7c52dd8-6859-4c46-a4b4-8c94bb3af05b" />
+<img width="1187" height="875" alt="2" src="https://github.com/user-attachments/assets/b6004a29-dd1a-4b32-8bb0-3dd865238180" />
 
-#### Priority Column (`G2`):
-```excel
-=IF(AND(Reason="Damaged Product", Purchase_Value > AVERAGE($E$2:$E$500)), "High", "")
-```
+---
 
-### 📸 Visual Documentation
+### Step 2: Regional Helpdesk Assignment
+A custom column titled **`Helpdesk`** is created to route customer issues according to regional operations:
 
-#### 1. Ingested Customer Dataset
-![Customer Care Data Import](screenshots/task1/01_data_import_preview.png)
-*Figure 1.1: Raw customer support records imported and normalized into a structured table.*
+<img width="1712" height="863" alt="3" src="https://github.com/user-attachments/assets/b65355bb-b3e8-4f3d-b9c1-f40be5be8f19" />
 
-#### 2. Helpdesk Routing Logic
-![Helpdesk Assignment](screenshots/task1/02_helpdesk_routing_formula.png)
-*Figure 1.2: Dynamic routing formula segmenting records into China, India, and USA helpdesks.*
+#### Routing Matrix:
+* **China Helpdesk**: Customers residing in South Korea or Japan.
+* **India Helpdesk**: Customers residing in Sri Lanka, New Zealand, or Wales.
+* **USA Helpdesk**: Customers from all other countries.
 
-#### 3. Priority Escalation Output
-![Priority Escalation Output](screenshots/task1/03_priority_escalation_output.png)
-*Figure 1.3: High-priority flags populated exclusively for above-average damaged item tickets.*
+---
+
+### Step 3: Priority Calculation
+A custom column titled **`Priority`** flags high-value support requests needing immediate resolution:
+
+<img width="1716" height="862" alt="4" src="https://github.com/user-attachments/assets/3f2be130-6f47-4e4a-8145-19f70648ec59" />
+
+#### Priority Logic:
+* **"High"**: Assigned only if the reason is `"Damaged item"` **and** the customer's purchase value exceeds the global average purchase value across all records.
+* **Empty string (`""`)**: Applied to all remaining tickets.
+
+---
+
+### Step 4: Load Data
+From the Power Query **Home** tab, click **Close & Load** to export the transformed data table directly into the active Excel workbook.
+
+<img width="1727" height="865" alt="5" src="https://github.com/user-attachments/assets/f34ade18-b1f2-4029-b5d7-705a9699d9f1" />
+
+---
+
+## Final Output Structure
+The final table includes all original attributes along with two engineered columns:
+1. `Customer`
+2. `Gender`
+3. `Country`
+4. `Reason`
+5. `Purchase value`
+6. **`Helpdesk`** (*China Helpdesk / India Helpdesk / USA Helpdesk*)
+7. **`Priority`** (*"High" or blank*)
 
 ---
 
