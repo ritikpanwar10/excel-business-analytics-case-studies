@@ -1,0 +1,39 @@
+Task: Employee Bonus Eligibility and Performance Analysis
+You are tasked with analyzing the bonus eligibility of employees in a company based on their performance metrics. The analysis involves determining which employees qualify for each of the five production bonuses (A, B, C, D, and E) based on specific criteria. Additionally, you will apply conditional formatting to visually distinguish the bonuses and calculate the percentage of workers ineligible for each bonus to gain insights into employee performance and identify areas for improvement.
+
+Objectives:
+
+
+1.Determine Bonus Eligibility:
+Create Five Bonus Columns:
+a) For each employee, create five new columns labeled Bonus A, Bonus B, Bonus C, Bonus D, and Bonus E.
+b) In each column, use a formula to determine eligibility based on the criteria below. If eligible, display "Bonus A", "Bonus B", etc.; if not, leave the cell blank.
+c) Bonus Criteria:
+Bonus A: Awarded to employees who produced 2,800 units or more.
+
+Bonus B: Given to those with fewer than 4 days of absence and at least 2,600 units produced.
+
+Bonus C: For employees with a machinery wear coefficient of 0.40 or lower, or those who worked 245 hours or more.
+
+Bonus D: Requires a wear coefficient of 0.30 or lower and fewer than 5 days absent, or at least 200 hours worked.
+
+Bonus E: Specific to female employees with a wear coefficient of 0.30 or lower, or those who produced 2,800 units or more.
+
+
+2.Apply Conditional Formatting:
+Distinct Colors for Each Bonus:
+a) Apply conditional formatting to the Bonus columns so that any cell displaying a bonus is automatically filled with a unique color specific to that bonus type (e.g., Bonus A might be green, Bonus B blue, etc.).
+b) Ensure that the formatting updates automatically if the underlying data changes.
+
+
+3.Calculate Ineligibility Percentages:
+Percentage of Ineligible Workers:
+a) At the end of your data set, calculate the percentage of employees who are ineligible for each bonus relative to the total number of employees.
+b) This analysis will help in understanding the distribution of bonuses and identifying areas where employees may need encouragement or support.
+
+
+Instructions:
+a) Use the employee data provided, which includes at least the following columns: Employee ID, Gender, Units Produced, Days Absent, Hours Worked, and Machinery Wear Coefficient.
+b) Implement formulas accurately to ensure correct bonus eligibility determination.
+c) Make sure your conditional formatting rules are correctly set up to reflect changes in data dynamically.
+d) Present your final calculations of ineligibility percentages clearly, possibly in a summary table.
