@@ -9,8 +9,8 @@ A comprehensive collection of hands-on Excel business analytics case studies, de
 2. [Case Study 1: Customer Care Services Data Management](#-case-study-1-customer-care-services-data-management)
 3. [Case Study 2: Cinema Ticket Sales & Revenue Contribution Analysis](#-case-study-2-cinema-ticket-sales--revenue-contribution-analysis)
 4. [Case Study 3: Employee Multi-Criteria Bonus Eligibility & Workforce Diagnostics](#-case-study-3-employee-multi-criteria-bonus-eligibility--workforce-diagnostics)
-5. [Formulas & Technical Reference](#-formulas--technical-reference)
-6. [Author & Portfolio Details](#-author--portfolio-details)
+5. [Formulas & Technical Reference](#-skills--functions-demonstrated)
+6. [Author & Portfolio Details](#-author)
 
 ---
 
@@ -284,6 +284,6 @@ Summary row calculations computing non-qualification rates using `COUNTBLANK` an
 ---
 
 ## 👤 Author
-- **LinkedIn:** [Your LinkedIn Profile URL](https://www.linkedin.com/in/ritik-panwar-01a67a24b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzPr0zrYGSguyR5pNTkBafQ%3D%3D)
-- **GitHub:** [Your GitHub Profile URL](https://github.com/ritikpanwar10/)
-- **Portfolio:** [Your Portfolio / Project Link](https://ritikpanwar10.github.io/ritikpanwar.github.io/)
+- **LinkedIn:** [LinkedIn Profile URL](https://www.linkedin.com/in/ritik-panwar-01a67a24b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzPr0zrYGSguyR5pNTkBafQ%3D%3D)
+- **GitHub:** [GitHub Profile URL](https://github.com/ritikpanwar10/)
+- **Portfolio:** [Portfolio / Project Link](https://ritikpanwar10.github.io/ritikpanwar.github.io/)
