@@ -165,49 +165,112 @@ $$\text{\% Revenue} = \left( \frac{\text{City Revenue}}{\text{Total Revenue}} \r
 ### 📌 Business Objective
 Evaluate factory floor employees across five distinct production incentive programs (Bonuses A–E) combining output volume, attendance, shift hours, and machinery wear metrics. Highlight qualifiers using automated conditional formatting and quantify workforce ineligibility percentages.
 
-### 📋 Bonus Criteria Matrix
+## 🎯 Objectives
+1. **Determine Eligibility Dynamically:** Create five dedicated columns (`Bonus A` to `Bonus E`) and evaluate qualification using nested Excel logical functions (`IF`, `AND`, `OR`). Eligible employees receive the bonus label; ineligible employees are left blank (`""`).
+2. **Visual Hierarchy with Conditional Formatting:** Apply unique color fills to each bonus column so qualifying employees can be identified at a glance.
+3. **Ineligibility & Performance Gap Analysis:** Compute the percentage of employees who failed to meet the criteria for each bonus tier across the total workforce.
 
-| Bonus Program | Qualification Criteria | Excel Formula Syntax |
-| :--- | :--- | :--- |
-| **Bonus A** | Units Produced $\ge$ 2,800 | `=IF(Units>=2800, "Bonus A", "")` |
-| **Bonus B** | Days Absent $<$ 4 **AND** Units $\ge$ 2,600 | `=IF(AND(DaysAbsent<4, Units>=2600), "Bonus B", "")` |
-| **Bonus C** | Wear Coeff $\le$ 0.40 **OR** Hours Worked $\ge$ 245 | `=IF(OR(Wear<=0.40, Hours>=245), "Bonus C", "")` |
-| **Bonus D** | (Wear $\le$ 0.30 **AND** Days Absent $<$ 5) **OR** Hours $\ge$ 200 | `=IF(OR(AND(Wear<=0.30, DaysAbsent<5), Hours>=200), "Bonus D", "")` |
-| **Bonus E** | (Gender = "Female" **AND** Wear $\le$ 0.30) **OR** Units $\ge$ 2,800 | `=IF(OR(AND(Gender="Female", Wear<=0.30), Units>=2800), "Bonus E", "")` |
+---
 
-### 🎨 Dynamic Conditional Formatting
-* Configured rules under **Home > Conditional Formatting > Highlight Cells Rules > Text that Contains**:
-  - `Bonus A` ➔ Soft Mint Green fill with dark green text (`#D4EDDA`)
-  - `Bonus B` ➔ Soft Cornflower Blue fill with dark blue text (`#CCE5FF`)
-  - `Bonus C` ➔ Soft Warm Amber fill with dark amber text (`#FFF3CD`)
-  - `Bonus D` ➔ Soft Lavender fill with dark purple text (`#E2D9F3`)
-  - `Bonus E` ➔ Soft Coral/Rose fill with dark red text (`#F8D7DA`)
+## 🧮 Bonus Criteria & Excel Formulas
 
-### 📊 Ineligibility Metric Calculations
-To calculate the percentage of workers who **did not qualify** for a given bonus:
+Formulas are structured for row `2` and copied down through row `121`:
 
-```excel
-=COUNTBLANK(G2:G101) / COUNTA($A$2:$A$101)
-```
-*Or via non-blank check:*
-```excel
-=(COUNTA($A$2:$A$101) - COUNTIF(G2:G101, "Bonus A")) / COUNTA($A$2:$A$101)
-```
-*(Formatted as Percentage `0.0%`)*
+### 1. Bonus A
+* **Criteria:** Awarded to employees who produced **2,800 units or more**.
+* **Formula:**
+  ```excel
+  =IF(F2>=2800, "Bonus A", "")
+  ```
 
-### 📸 Visual Documentation
+### 2. Bonus B
+* **Criteria:** Awarded to employees with **fewer than 4 days of absence** AND **at least 2,600 units produced**.
+* **Formula:**
+  ```excel
+  =IF(AND(C2<4, F2>=2600), "Bonus B", "")
+  ```
 
-#### 1. Multi-Criteria Formulas & Logic Application
-![Bonus Criteria Logic](screenshots/task3/01_bonus_criteria_logic.png)
-*Figure 3.1: Formula implementation evaluating composite performance criteria.*
+### 3. Bonus C
+* **Criteria:** Awarded to employees with a **machinery wear coefficient of 0.40 or lower** OR who **worked 245 hours or more**.
+* **Formula:**
+  ```excel
+  =IF(OR(E2<=0.40, D2>=245), "Bonus C", "")
+  ```
 
-#### 2. Conditional Formatting Grid
-![Conditional Formatting Grid](screenshots/task3/02_conditional_formatting_applied.png)
-*Figure 3.2: Automated color highlights highlighting qualifying staff across programs.*
+### 4. Bonus D
+* **Criteria:** Requires a **wear coefficient of 0.30 or lower AND fewer than 5 days absent**, OR **at least 200 hours worked**.
+* **Formula:**
+  ```excel
+  =IF(OR(AND(E2<=0.30, C2<5), D2>=200), "Bonus D", "")
+  ```
 
-#### 3. Ineligibility Summary Dashboard
-![Ineligibility Summary Table](screenshots/task3/03_ineligibility_summary_table.png)
-*Figure 3.3: Diagnostic table displaying the percentage of workers ineligible per bonus.*
+### 5. Bonus E
+* **Criteria:** Specific to **female employees** who meet either of the following conditions:
+  * Machinery wear coefficient of **0.30 or lower**, OR
+  * Produced **2,800 units or more**.
+* **Formula:**
+  ```excel
+  =IF(AND(B2="F", OR(E2<=0.30, F2>=2800)), "Bonus E", "")
+  ```
+
+---
+
+## 🎨 Conditional Formatting Rules
+
+To make the eligibility status dynamically distinguishable, conditional formatting rules (using "Format only cells that contain" or specific text matching) were applied across `G2:K121`:
+
+| Bonus Column | Cell Value Rule | Fill Color | Visual Purpose |
+| :--- | :--- | :--- | :--- |
+| **Bonus A (Col G)** | Cell Value equal to `"Bonus A"` | 🟩 **Light Green** | Highlights top production output |
+| **Bonus B (Col H)** | Cell Value equal to `"Bonus B"` | 🟦 **Blue** | Highlights high output with low absenteeism |
+| **Bonus C (Col I)** | Cell Value equal to `"Bonus C"` | 🟨 **Yellow** | Highlights machine efficiency or long hours |
+| **Bonus D (Col J)** | Cell Value equal to `"Bonus D"` | 🟥 **Red** | Highlights low-wear attendance or 200+ hours |
+| **Bonus E (Col K)** | Cell Value equal to `"Bonus E"` | 🟪 **Purple** | Highlights qualified female workforce members |
+
+---
+
+## 📈 Ineligibility Rate Analysis
+
+The total ineligibility rate for each bonus category is calculated at the summary row (`Row 122`) by counting blank cells in each bonus column divided by the total number of employee entries:
+
+$$\text{Ineligibility Percentage} = \frac{\text{COUNTBLANK}(X2:X121)}{\text{COUNTA}(\$A\$2:\$A\$121)}$$
+
+### Summary Table
+
+| Metric | Bonus A | Bonus B | Bonus C | Bonus D | Bonus E |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Excel Formula (Row 122)** | `=COUNTBLANK(G2:G121)/COUNTA($A$2:$A$121)` | `=COUNTBLANK(H2:H121)/COUNTA($A$2:$A$121)` | `=COUNTBLANK(I2:I121)/COUNTA($A$2:$A$121)` | `=COUNTBLANK(J2:J121)/COUNTA($A$2:$A$121)` | `=COUNTBLANK(K2:K121)/COUNTA($A$2:$A$121)` |
+| **Ineligibility Rate (%)** | **74.17%** | **68.33%** | **53.33%** | **38.33%** | **78.33%** |
+| **Eligibility Rate (%)** | **25.83%** | **31.67%** | **46.67%** | **61.67%** | **21.67%** |
+
+### Key Takeaways:
+1. **Most Accessible Incentive:** **Bonus D** has the lowest ineligibility rate (**38.33%**), meaning over $61\%$ of the workforce qualified due to the accessible 200-hour threshold.
+2. **Most Stringent Production Target:** **Bonus A** disqualified **74.17%** of employees, showing that 2,800+ units is an elite production milestone achieved by only ~26% of workers.
+3. **Gender-Specific Bonus E:** Ineligible rate stands at **78.33%**, representing both non-female employees as well as female employees who did not satisfy the secondary criteria.
+
+---
+
+## 🖼️ Process Screenshots
+
+### Step 1: Bonus Eligibility Formulas Applied
+Formulas entered across columns G through K returning designated bonus strings or blank values.
+
+<img width="1908" height="941" alt="1 1" src="https://github.com/user-attachments/assets/cffda5d6-5ad6-48e1-b26e-529a6b264265" />
+
+
+---
+
+### Step 2: Dynamic Conditional Formatting Applied
+Color-coded rules active across each bonus column for rapid visual filtering.
+
+<img width="1917" height="933" alt="1" src="https://github.com/user-attachments/assets/d125a259-29bb-4791-bee5-ffe87cd2a68f" />
+
+---
+
+### Step 3: Ineligibility Percentage Calculation
+Summary row calculations computing non-qualification rates using `COUNTBLANK` and `COUNTA`.
+
+<img width="1918" height="932" alt="2" src="https://github.com/user-attachments/assets/bff19fd3-4e09-494f-8fee-c87aa266e70c" />
 
 ---
 
